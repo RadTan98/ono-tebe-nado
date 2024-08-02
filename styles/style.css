@@ -10,8 +10,9 @@
 
 .header__menu {
   justify-self: start;
-  width: 391.48px;
-  height: 22px;
+  max-width: 391.48px;
+  width: 100%;
+  /*height: 22px;*/
 }
 
 .header__links-list {
@@ -63,7 +64,7 @@
 
 .cover {
   padding-bottom: 51px;
-  min-height: 757px;
+ /* min-height: 757px;*/
   background-image: url('../images/cover.jpg');
   background-size: cover;
   background-position: center;
@@ -90,15 +91,17 @@
   grid-template-rows: 115px 100px 100px;
   justify-content: space-between;
   gap: 20px;
-}
+  position: relative;
+  z-index: 2;
+  align-self: end;
+   }
 
 .aligned-text {
   line-height: 115px;
   display: block;
   grid-column-start: 1;
   grid-column-end: span 2;
-  z-index: 2;
-}
+ }
 
 .aligned-text_center {
   line-height: 100px;
@@ -106,9 +109,8 @@
   grid-column-start: 2;
   grid-column-end: span 3;
   justify-self: center;
-  align-self: end;
-  z-index: 2;
-}
+ /* align-self: end;*/
+  }
 
 .aligned-text_right {
   line-height: 100px;
@@ -116,9 +118,8 @@
   grid-column-start: 4;
   grid-column-end: span 2;
   justify-self: right;
-  align-self: end;
-  z-index: 2;
-}
+ /* align-self: end;*/
+ }
 
 .letter-spacing-extended {
   letter-spacing: 0.6em;
@@ -197,8 +198,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  inset: 0;
-}
+ }
 
 .card_type_film {
   background-image: url('../images/card-lot-01.jpg');
@@ -289,11 +289,12 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.07px;
-}
-
-.about__text-first {
   padding-bottom: 25px;
 }
+
+/*.about__text-first {
+  padding-bottom: 25px;
+}*/
 
 .footer {
   padding: 180px 50px 88px;
